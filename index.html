@@ -4,12 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guardianes del Océano - Sitio Oficial</title>
+    <!-- Fuente Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- CONTENEDOR DE BURBUJAS DE FONDO -->
+    <div class="bubbles-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">🌊 Guardianes del Océano</a>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">¿Qué es?</a></li>
+                <li><a href="#escenarios">Escenarios</a></li>
+                <li><a href="#trailer">Tráiler</a></li>
+                <li><a href="#tutorial">Tutorial</a></li>
+                <li><a href="#descarga">Descargar</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- 1. PORTADA: Encabezado / Banner Principal -->
-    <header class="hero-banner">
+    <header id="inicio" class="hero-banner">
         <img src="Fotos/1.png" alt="Guardianes del Océano Banner" class="hero-img">
         <div class="hero-content">
             <a href="#descarga" class="btn-descargar-hero">Descargar Prototipo (Alfa)</a>
@@ -17,7 +49,7 @@
     </header>
 
     <!-- 2. DESCRIPCIÓN: Información General y ODS -->
-    <section class="info-container">
+    <section id="acerca" class="info-container">
         <h2>¿Qué es Guardianes del Océano?</h2>
         <p><strong>Guardianes del Océano</strong> es un videojuego educativo en 2D desarrollado en Unity que combina la aventura y la ecología. Su misión principal es generar conciencia sobre la contaminación ambiental a través de dinámicas lúdicas donde los jugadores aprenden la importancia de limpiar los recursos naturales.</p>
         
@@ -32,10 +64,10 @@
         </div>
     </section>
 
-    <!-- 3 y 5. GALERÍA / ESCENARIOS: Menú Principal, Escenarios y Herramientas -->
+    <!-- 3. MENÚ PRINCIPAL -->
     <section class="section-game">
         <div class="content-text">
-            <h2>1. Menú Principal</h2>
+            <h2>Menú Principal</h2>
             <p>La pantalla de inicio da la bienvenida a los jugadores con un entorno animado en bucle, mostrando elementos de la naturaleza, el faro y las opciones principales para comenzar la aventura.</p>
         </div>
         <div class="content-image">
@@ -43,8 +75,9 @@
         </div>
     </section>
 
-    <section class="section-container-multi">
-        <h2>2. Selección de Escenarios</h2>
+    <!-- 5. ESCENARIOS Y HERRAMIENTAS -->
+    <section id="escenarios" class="section-container-multi">
+        <h2>Selección de Escenarios</h2>
         <p class="section-subtitle">Espacio interactivo donde los usuarios eligen el entorno de limpieza:</p>
         
         <div class="grid-subsecciones">
@@ -64,8 +97,8 @@
 
     <section class="section-game">
         <div class="content-text">
-            <h2>3. Panel de Herramientas</h2>
-            <p>El juego incluye un inventario de herramientas ecológicas y de apoyo (redes, imanes, contenedores, escudos y purificadores) diseñadas para facilitar la limpieza del agua.</p>
+            <h2>Panel de Herramientas</h2>
+            <p>El juego incluye un inventario de herramientas ecológicas y de apoyo diseñadas para facilitar la limpieza del agua: la Red recoge basura flotante, el Imán atrae objetos metálicos, el Escudo te protege de obstáculos y el Turbo aumenta la velocidad por unos segundos. Todo bajo la consigna: "Usa las herramientas para limpiar y preservar la naturaleza".</p>
         </div>
         <div class="content-image">
             <img src="Fotos/Herramientas.png" alt="Pantalla de Herramientas del Juego">
@@ -73,31 +106,31 @@
     </section>
 
     <!-- 4. TRÁILER -->
-    <section class="info-container">
-        <h2>4. Tráiler Promocional</h2>
+    <section id="trailer" class="info-container">
+        <h2>Tráiler Promocional</h2>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Tráiler de Guardianes del Océano" allowfullscreen></iframe>
         </div>
     </section>
 
     <!-- 6. TUTORIAL -->
-    <section class="section-container-multi">
-        <h2>6. Tutorial e Instrucciones</h2>
+    <section id="tutorial" class="section-container-multi">
+        <h2>Tutorial e Instrucciones</h2>
         <div class="grid-subsecciones">
             <div class="sub-card">
                 <h3>🎮 Controles del Juego</h3>
                 <ul>
-                    <li><strong>A / D o Flechas:</strong> Movimiento lateral.</li>
-                    <li><strong>Barra Espaciadora:</strong> Usar la herramienta activa.</li>
-                    <li><strong>Teclas 1 - 5:</strong> Seleccionar tipo de herramienta.</li>
+                     <li><strong>Flechas del teclado:</strong> Permiten mover el bote hacia arriba, abajo, izquierda y derecha.</li> 
+                    <li><strong>Barra Espaciadora:</strong> Usar la herramienta activa (Nivel de playa1).</li>
+                    <li><strong>Teclas W y S:</strong> Permiten mover el bote hacia arriba y abajo.</li>
                     <li><strong>ESC:</strong> Pausa / Menú.</li>
                 </ul>
             </div>
             <div class="sub-card">
-                <h3>📜 Reglas Principales</h3>
+                <h3>🎯 Reglas Principales</h3>
                 <ul>
                     <li>Limpia la mayor cantidad de plásticos antes de que termine el tiempo.</li>
-                    <li>Evita chocar contra obstáculos marinos o la fauna para no perder vida.</li>
+                    <li>Evita chocar contra obstáculos marinos para no perder vida.</li>
                     <li>Selecciona la herramienta adecuada según el tipo de residuo.</li>
                 </ul>
             </div>
@@ -106,15 +139,7 @@
 
     <!-- 7 y 8. DESCARGA Y REQUISITOS -->
     <section id="descarga" class="info-container">
-        <h2>7 y 8. Descarga y Requisitos del Sistema</h2>
-        
-        <div class="download-card">
-            <h3>Versión Alfa (v0.8.2)</h3>
-            <p>Plataforma: Windows (64-bit) | Tamaño: 250 MB</p>
-            <a href="#" class="btn-descargar-hero">Descargar Juego (.ZIP)</a>
-        </div>
-
-        <div class="ods-box" style="margin-top: 1.5rem;">
+        <h2>Descarga y Requisitos del Sistema</h2>
             <h3>Requisitos Mínimos del Sistema</h3>
             <ul>
                 <li><strong>SO:</strong> Windows 10 / 11 (64-bit)</li>
@@ -128,7 +153,7 @@
 
     <!-- 9. GUÍA DE INSTALACIÓN -->
     <section class="info-container">
-        <h2>9. Guía de Instalación</h2>
+        <h2>Guía de Instalación</h2>
         <ol class="pasos-instalacion">
             <li>Descarga el archivo comprimido utilizando el botón superior.</li>
             <li>Extrae el contenido del archivo <code>.ZIP</code> en una carpeta de tu preferencia.</li>
@@ -139,7 +164,7 @@
 
     <!-- 10. BITÁCORA DE DESARROLLO -->
     <section class="section-container-multi">
-        <h2>10. Bitácora de Desarrollo (Sprints)</h2>
+        <h2>Bitácora de Desarrollo (Sprints)</h2>
         <div class="grid-subsecciones">
             <div class="sub-card">
                 <h3>Sprint 1: Base y Prototipeo</h3>
@@ -157,23 +182,24 @@
     </section>
 
     <!-- 11 y 12. EQUIPO Y TECNOLOGÍAS -->
-    <section class="section-container-multi">
-        <h2>11 y 12. Equipo y Tecnologías</h2>
+    <section id="equipo" class="section-container-multi">
+        <h2>Equipo y Tecnologías</h2>
         <div class="grid-subsecciones">
             <div class="sub-card">
-                <h3>👥 11. Equipo de Desarrollo</h3>
+                <h3>👥 Equipo de Desarrollo</h3>
                 <ul>
-                    <li><strong>Integrante 1:</strong> Programación C# y Lógica en Unity</li>
-                    <li><strong>Integrante 2:</strong> Arte 2D, Sprites y Diseño UI/UX</li>
-                    <li><strong>Integrante 3:</strong> Game Design, Pruebas y Documentación</li>
+                  <li><strong>JuanCarlos:</strong> Programación del videojuego en Unity y diseño de sus elementos visuales</li>
+                  <li><strong>Josue:</strong> Programación del videojuego en Unity y diseño de sus elementos visuales</li>
+                  <li><strong>Judith:</strong> Programación del videojuego en Unity y diseño de sus elementos visuales</li>
+                  <li><strong>Yuridia:</strong> Diseño de páginas web del videojuego, pruebas y documentación</li>
                 </ul>
             </div>
             <div class="sub-card">
-                <h3>🛠️ 12. Tecnologías Utilizadas</h3>
+                <h3>🛠️ Tecnologías Utilizadas</h3>
                 <ul>
                     <li><strong>Motor:</strong> Unity 2D (Versión 2022.3 LTS)</li>
                     <li><strong>Lenguaje:</strong> C#</li>
-                    <li><strong>Diseño Gráfico:</strong> Adobe Illustrator / Photoshop / Aseprite</li>
+                    <li><strong>Herramientas de desarrollo:</strong> Canva y Visual Studio</li>
                     <li><strong>Control de versiones:</strong> Git & GitHub</li>
                 </ul>
             </div>
@@ -182,53 +208,43 @@
 
     <!-- 13 AL 15. CRÉDITOS, IA Y LICENCIAS -->
     <section class="section-container-multi">
-        <h2>13 al 15. Créditos, IA y Licencias</h2>
+        <h2>Créditos, IA y Licencias</h2>
         <div class="grid-subsecciones">
-            
             <div class="sub-card">
-                <h3>🎨 13. Créditos y Recursos Externos</h3>
-                <p>Efectos de sonido y música de fondo utilizados bajo licencias Creative Commons provenientes de <strong>Freesound.org</strong> y <strong>OpenGameArt.org</strong>.</p>
+                <h3>🎨 Créditos y Recursos</h3>
+                <p>Efectos de sonido y música bajo licencias Creative Commons de Freesound.org y OpenGameArt.org.</p>
             </div>
-
             <div class="sub-card">
-                <h3>🤖 14. Uso de Inteligencia Artificial</h3>
-                <p>Se utilizaron herramientas de IA exclusivamente como apoyo en la optimización de código en C# e inspiración conceptual para bocetos e ideas iniciales.</p>
+                <h3>🤖 Uso de Inteligencia Artificial</h3>
+                <p>Herramientas de IA utilizadas como apoyo en optimización de código e inspiración conceptual inicial.</p>
             </div>
-
             <div class="sub-card">
-                <h3>📜 15. Licencias</h3>
-                <p>El código fuente de este proyecto se distribuye bajo la licencia <strong>MIT</strong>. Los recursos gráficos y de arte son propiedad exclusiva de los autores del proyecto.</p>
+                <h3>📜 Licencias</h3>
+                <p>Código fuente bajo licencia MIT. Los recursos gráficos son propiedad de los autores del proyecto.</p>
             </div>
-
         </div>
     </section>
 
     <!-- 16 AL 19. TÉRMINOS, LEGALES Y CONTACTO -->
-    <section class="section-container-multi">
-        <h2>16 al 19. Términos, Legales y Contacto</h2>
+    <section id="contacto" class="section-container-multi">
+        <h2>Términos, Legales y Contacto</h2>
         <div class="grid-subsecciones">
-
             <div class="sub-card">
-                <h3>⚠️ 16. Advertencias</h3>
-                <p>Clasificación sugerida: <strong>PEGI 3 / ESRB Everyone</strong> (Apto para todo público). No contiene violencia gráfica ni contenido sensible.</p>
+                <h3>⚠️ Advertencias</h3>
+                <p>Clasificación: <strong>PEGI 3 / ESRB Everyone</strong>. Apto para todo público.</p>
             </div>
-
             <div class="sub-card">
-                <h3>⚖️ 17. Descargo de Responsabilidad</h3>
-                <p>Proyecto entregado con fines estrictamente académicos. Se ofrece "tal cual", sin garantías de actualizaciones o mantenimiento técnico posterior.</p>
+                <h3>⚖️ Descargo de Responsabilidad</h3>
+                <p>Proyecto desarrollado con fines estrictamente académicos.</p>
             </div>
-
             <div class="sub-card">
-                <h3>✉️️ 18. Contacto</h3>
-                <p>Si tienes preguntas, dudas o comentarios sobre el proyecto, puedes contactarnos en:</p>
-                <p><strong>Correo:</strong> <a href="mailto:contacto.guardianes@ejemplo.com">contacto.guardianes@ejemplo.com</a></p>
+                <h3>✉️ Contacto</h3>
+                <p><strong>Correo:</strong> <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a></p>
             </div>
-
             <div class="sub-card">
-                <h3>🔒 19. Aviso de Privacidad</h3>
-                <p>Este sitio web y el videojuego no recopilan, almacenan ni procesan datos personales ni métricas de uso de los usuarios.</p>
+                <h3>🔒 Aviso de Privacidad</h3>
+                <p>Este sitio web y el juego no recopilan ni procesan datos personales.</p>
             </div>
-
         </div>
     </section>
 
