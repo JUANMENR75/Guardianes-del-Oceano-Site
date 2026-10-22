@@ -29,83 +29,88 @@
             <a href="#" class="nav-logo">🌊 Guardianes del Océano</a>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca">¿Qué es?</a></li>
-                <li><a href="#escenarios">Escenarios</a></li>
+                <li><a href="#descripcion">Descripción</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
                 <li><a href="#trailer">Tráiler</a></li>
+                <li><a href="#galeria">Galería</a></li>
                 <li><a href="#tutorial">Tutorial</a></li>
                 <li><a href="#descarga">Descargar</a></li>
-                <li><a href="#equipo">Equipo</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#detalles-tecnicos">Detalles y Legales</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 1. PORTADA: Encabezado / Banner Principal -->
+    <!-- 1. PORTADA: Nombre, logotipo, eslogan e imagen principal -->
     <header id="inicio" class="hero-banner">
-        <img src="Fotos/1.png" alt="Guardianes del Océano Banner" class="hero-img">
+        <img src="Fotos/1.png" alt="Guardianes del Océano Banner Principal" class="hero-img">
         <div class="hero-content">
             <a href="#descarga" class="btn-descargar-hero">Descargar Prototipo (Alfa)</a>
         </div>
     </header>
 
-    <!-- 2. DESCRIPCIÓN: Información General y ODS -->
-    <section id="acerca" class="info-container">
-        <h2>¿Qué es Guardianes del Océano?</h2>
-        <p><strong>Guardianes del Océano</strong> es un videojuego educativo en 2D desarrollado en Unity que combina la aventura y la ecología. Su misión principal es generar conciencia sobre la contaminación ambiental a través de dinámicas lúdicas donde los jugadores aprenden la importancia de limpiar los recursos naturales.</p>
+    <!-- 2. DESCRIPCIÓN: Historia, género, objetivo y público del juego -->
+    <section id="descripcion" class="info-container">
+        <h2>Descripción del Juego</h2>
         
-        <div class="ods-box">
+        <div class="sub-card">
+            <h3>📖 Historia General</h3>
+            <p>Durante muchos años, el océano mantuvo en equilibrio la vida de Bahía Azul, una comunidad que dependía del mar para alimentarse y prosperar. Sin embargo, la acumulación de basura en las playas, la contaminación del agua y los residuos hundidos comenzaron a afectar a los animales marinos y a destruir su ecosistema.</p>
+            <p>Kai, un joven habitante de la bahía, descubre una pequeña tortuga atrapada entre plásticos. Después de liberarla, comprende que limpiar solamente un lugar no será suficiente: la contaminación se extiende desde la playa hasta las profundidades del océano. Con la ayuda de los habitantes de la comunidad y utilizando un barco recolector, Kai inicia una misión para limpiar las diferentes zonas, rescatar animales y descubrir el origen de la contaminación.</p>
+            <p>Cada residuo recuperado devuelve vida y color al ambiente. Su propósito será formar a los <strong>Guardianes del Océano</strong>, un grupo dedicado a proteger el mar y enseñar que incluso las acciones pequeñas pueden generar un gran cambio.</p>
+        </div>
+
+        <div class="grid-subsecciones" style="margin-top: 15px;">
+            <div class="sub-card">
+                <h3>🎮 Género</h3>
+                <p>Aventura / Ecología / Arcade Educativo 2D.</p>
+            </div>
+            <div class="sub-card">
+                <h3>🎯 Objetivo</h3>
+                <p>Navegar con el barco recolector de Kai por distintos entornos, recolectar residuos y liberar animales atrapados para devolver la salud y el equilibrio a Bahía Azul.</p>
+            </div>
+            <div class="sub-card">
+                <h3>👥 Público Objetivo</h3>
+                <p>Apto para todo público (PEGI 3 / ESRB Everyone), orientado a estudiantes y jóvenes con interés en el aprendizaje interactivo sobre ecología.</p>
+            </div>
+        </div>
+
+        <div class="ods-box" style="margin-top: 20px;">
             <h3>Compromiso Ambiental y ODS Asociados</h3>
             <ul>
-                <li><strong>ODS 14 (Vida Submarina):</strong> Eje central enfocado en proteger y limpiar los mares y cuerpos de agua.</li>
-                <li><strong>ODS 12 (Producción y Consumo Responsables):</strong> Fomenta la conciencia sobre el manejo adecuado de residuos y plásticos.</li>
-                <li><strong>ODS 4 (Educación de Calidad):</strong> Utiliza la gamificación como una herramienta pedagógica interactiva.</li>
-                <li><strong>ODS 13 (Acción por el Clima):</strong> Destaca el impacto de la contaminación en el equilibrio global del planeta.</li>
+                <li><strong>ODS 14 (Vida Submarina):</strong> Protege y limpia las playas y ecosistemas marinos de Bahía Azul.</li>
+                <li><strong>ODS 12 (Producción y Consumo Responsables):</strong> Genera conciencia sobre la correcta recolección y manejo de residuos plásticos.</li>
+                <li><strong>ODS 4 (Educación de Calidad):</strong> Utiliza la gamificación pedagógica para inculcar valores de protección ambiental.</li>
+                <li><strong>ODS 13 (Acción por el Clima):</strong> Destaca cómo la preservación de los océanos combate el deterioro ambiental global.</li>
             </ul>
         </div>
     </section>
 
-    <!-- 3. MENÚ PRINCIPAL -->
-    <section class="section-game">
-        <div class="content-text">
-            <h2>Menú Principal</h2>
-            <p>La pantalla de inicio da la bienvenida a los jugadores con un entorno animado en bucle, mostrando elementos de la naturaleza, el faro y las opciones principales para comenzar la aventura.</p>
-        </div>
-        <div class="content-image">
-            <img src="Fotos/Menu Principal.png" alt="Menú Principal de Guardianes del Océano">
-        </div>
-    </section>
-
-    <!-- 5. ESCENARIOS Y HERRAMIENTAS -->
-    <section id="escenarios" class="section-container-multi">
-        <h2>Selección de Escenarios</h2>
-        <p class="section-subtitle">Espacio interactivo donde los usuarios eligen el entorno de limpieza:</p>
-        
+    <!-- 3. CARACTERÍSTICAS: Mecánicas y elementos principales -->
+    <section id="caracteristicas" class="section-container-multi">
+        <h2>Características Principales</h2>
         <div class="grid-subsecciones">
             <div class="sub-card">
-                <h3>Escenario: Playa</h3>
-                <img src="Fotos/Escenario Playa.png" alt="Escenario de Playa">
-                <p>Zona costera donde el jugador se enfoca en recolectar plásticos y residuos arrastrados a la orilla por las olas.</p>
+                <h3>Mecánicas de Navegación y Limpieza</h3>
+                <p>Controla el barco recolector en tiempo real, esquivando obstáculos marinos mientras recoges plásticos y desechos antes de que el contador de tiempo llegue a cero.</p>
             </div>
-
             <div class="sub-card">
-                <h3>Escenario: Océano</h3>
-                <img src="Fotos/Escenario Océano.png" alt="Escenario de Océano">
-                <p>Entorno marino abierto donde se implementan retos de navegación, recolección de basura flotante y esquive de obstáculos.</p>
+                <h3>Panel de Herramientas Ecológicas</h3>
+                <p>Equipa la embarcación con herramientas estratégicas de limpieza:</p>
+                <ul>
+                    <li><strong>Red:</strong> Recoge basura flotante estándar.</li>
+                    <li><strong>Imán:</strong> Atrae objetos metálicos pesados.</li>
+                    <li><strong>Escudo:</strong> Protege la embarcación contra impactos.</li>
+                    <li><strong>Turbo:</strong> Incrementa la velocidad temporalmente.</li>
+                </ul>
+            </div>
+            <div class="sub-card">
+                <h3>Escenarios Dinámicos</h3>
+                <p>Acompaña a Kai desde las orillas de la playa hasta las zonas profundas del océano abierto, enfrentando retos únicos en cada entorno.</p>
             </div>
         </div>
     </section>
 
-    <section class="section-game">
-        <div class="content-text">
-            <h2>Panel de Herramientas</h2>
-            <p>El juego incluye un inventario de herramientas ecológicas y de apoyo diseñadas para facilitar la limpieza del agua: la Red recoge basura flotante, el Imán atrae objetos metálicos, el Escudo te protege de obstáculos y el Turbo aumenta la velocidad por unos segundos. Todo bajo la consigna: "Usa las herramientas para limpiar y preservar la naturaleza".</p>
-        </div>
-        <div class="content-image">
-            <img src="Fotos/Herramientas.png" alt="Pantalla de Herramientas del Juego">
-        </div>
-    </section>
-
-    <!-- 4. TRÁILER -->
+    <!-- 4. TRÁILER: Video promocional del videojuego -->
     <section id="trailer" class="info-container">
         <h2>Tráiler Promocional</h2>
         <div class="video-container">
@@ -113,56 +118,88 @@
         </div>
     </section>
 
-    <!-- 6. TUTORIAL -->
+    <!-- 5. GALERÍA: Capturas y videos reales de la versión publicada -->
+    <section id="galeria" class="section-container-multi">
+        <h2>Galería del Juego</h2>
+        <div class="grid-subsecciones">
+            <div class="sub-card">
+                <h3>Menú Principal</h3>
+                <img src="Fotos/Menu Principal.png" alt="Menú Principal de Guardianes del Océano">
+                <p>Pantalla de inicio animada con entorno interactivo en bucle.</p>
+            </div>
+            <div class="sub-card">
+                <h3>Escenario: Playa</h3>
+                <img src="Fotos/Escenario Playa.png" alt="Escenario de Playa">
+                <p>Limpieza de plásticos y residuos arrastrados a la orilla por la corriente.</p>
+            </div>
+            <div class="sub-card">
+                <h3>Escenario: Océano</h3>
+                <img src="Fotos/Escenario Océano.png" alt="Escenario de Océano">
+                <p>Navegación avanzada en mar abierto para rescatar la fauna afectada.</p>
+            </div>
+            <div class="sub-card">
+                <h3>Panel de Herramientas</h3>
+                <img src="Fotos/Herramientas.png" alt="Pantalla de Herramientas del Juego">
+                <p>Inventario de herramientas ecológicas activables durante la partida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TUTORIAL: Instrucciones, reglas y controles -->
     <section id="tutorial" class="section-container-multi">
         <h2>Tutorial e Instrucciones</h2>
         <div class="grid-subsecciones">
             <div class="sub-card">
                 <h3>🎮 Controles del Juego</h3>
                 <ul>
-                     <li><strong>Flechas del teclado:</strong> Permiten mover el bote hacia arriba, abajo, izquierda y derecha.</li> 
-                    <li><strong>Barra Espaciadora:</strong> Usar la herramienta activa (Nivel de playa1).</li>
-                    <li><strong>Teclas W y S:</strong> Permiten mover el bote hacia arriba y abajo.</li>
-                    <li><strong>ESC:</strong> Pausa / Menú.</li>
+                    <li><strong>Flechas del teclado:</strong> Desplazar el barco (Arriba, Abajo, Izquierda, Derecha).</li> 
+                    <li><strong>Teclas W y S:</strong> Control vertical alternativo.</li>
+                    <li><strong>Barra Espaciadora:</strong> Usar la herramienta activa.</li>
+                    <li><strong>ESC:</strong> Menú de Pausa.</li>
                 </ul>
             </div>
             <div class="sub-card">
                 <h3>🎯 Reglas Principales</h3>
                 <ul>
-                    <li>Limpia la mayor cantidad de plásticos antes de que termine el tiempo.</li>
-                    <li>Evita chocar contra obstáculos marinos para no perder vida.</li>
-                    <li>Selecciona la herramienta adecuada según el tipo de residuo.</li>
+                    <li>Recoge el máximo de basura posible antes de que expire el tiempo.</li>
+                    <li>Evita colisiones con obstáculos marinos para no perder salud en el barco.</li>
+                    <li>Selecciona la herramienta adecuada según el residuo o situación.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- 7 y 8. DESCARGA Y REQUISITOS -->
-    <section id="descarga" class="info-container">
-        <h2>Descarga y Requisitos del Sistema</h2>
-            <h3>Requisitos Mínimos del Sistema</h3>
-            <ul>
-                <li><strong>SO:</strong> Windows 10 / 11 (64-bit)</li>
-                <li><strong>Procesador:</strong> Intel Core i3 o equivalente AMD</li>
-                <li><strong>RAM:</strong> 4 GB</li>
-                <li><strong>Gráficos:</strong> Gráficos integrados Intel HD 4000 o superior</li>
-                <li><strong>Almacenamiento:</strong> 500 MB de espacio disponible</li>
-            </ul>
+    <!-- 7. DESCARGA, 8. REQUISITOS Y 9. INSTALACIÓN AGRUPADOS -->
+    <section id="descarga" class="section-container-multi">
+        <h2>Descarga e Instalación</h2>
+        <div class="grid-subsecciones">
+            <div class="sub-card">
+                <h3>💾 Descarga</h3>
+                <p><strong>Versión:</strong> 1.0 (Alfa) | <strong>Plataforma:</strong> PC (Windows)</p>
+                <p><strong>Tamaño:</strong> ~150 MB</p>
+            </div>
+            <div class="sub-card">
+                <h3>💻 Requisitos Mínimos</h3>
+                <ul>
+                    <li><strong>SO:</strong> Windows 10 / 11 (64-bit)</li>
+                    <li><strong>Procesador:</strong> Intel Core i3 / AMD equivalente</li>
+                    <li><strong>RAM:</strong> 4 GB | <strong>Espacio:</strong> 500 MB</li>
+                    <li><strong>Gráficos:</strong> Intel HD 4000 o superior</li>
+                </ul>
+            </div>
+            <div class="sub-card">
+                <h3>⚙️ Guía de Instalación</h3>
+                <ol class="pasos-instalacion">
+                    <li>Descarga el archivo <code>.ZIP</code>.</li>
+                    <li>Descomprímelo en tu carpeta preferida.</li>
+                    <li>Ejecuta <code>GuardianesDelOceano.exe</code>.</li>
+                    <li>Si salta SmartScreen, selecciona <em>"Más información"</em> y <em>"Ejecutar de todas formas"</em>.</li>
+                </ol>
+            </div>
         </div>
     </section>
 
-    <!-- 9. GUÍA DE INSTALACIÓN -->
-    <section class="info-container">
-        <h2>Guía de Instalación</h2>
-        <ol class="pasos-instalacion">
-            <li>Descarga el archivo comprimido utilizando el botón superior.</li>
-            <li>Extrae el contenido del archivo <code>.ZIP</code> en una carpeta de tu preferencia.</li>
-            <li>Abre la carpeta descomprimida y haz doble clic en <code>GuardianesDelOceano.exe</code>.</li>
-            <li>Si aparece un aviso de Windows SmartScreen, selecciona <em>"Más información"</em> y luego <em>"Ejecutar de todas formas"</em>.</li>
-        </ol>
-    </section>
-
-    <!-- 10. BITÁCORA DE DESARROLLO -->
+    <!-- 10. DESARROLLO (SPRINTS) -->
     <section class="section-container-multi">
         <h2>Bitácora de Desarrollo (Sprints)</h2>
         <div class="grid-subsecciones">
@@ -181,69 +218,73 @@
         </div>
     </section>
 
-    <!-- 11 y 12. EQUIPO Y TECNOLOGÍAS -->
-    <section id="equipo" class="section-container-multi">
-        <h2>Equipo y Tecnologías</h2>
+    <!-- 11 AL 19: UN SOLO CUADRO GRANDE CON SUB-TARJETAS AGRUPADAS -->
+    <section id="detalles-tecnicos" class="section-container-multi">
+        <h2>Información Técnica, Equipo y Aspectos Legales</h2>
+        
         <div class="grid-subsecciones">
+            <!-- 11. Equipo de Desarrollo -->
             <div class="sub-card">
                 <h3>👥 Equipo de Desarrollo</h3>
                 <ul>
-                  <li><strong>JuanCarlos:</strong> Programación del videojuego en Unity y diseño de sus elementos visuales</li>
-                  <li><strong>Josue:</strong> Programación del videojuego en Unity y diseño de sus elementos visuales</li>
-                  <li><strong>Judith:</strong> Programación del videojuego en Unity y diseño de sus elementos visuales</li>
-                  <li><strong>Yuridia:</strong> Diseño de páginas web del videojuego, pruebas y documentación</li>
+                    <li><strong>JuanCarlos:</strong> Programación en Unity y diseño visual.</li>
+                    <li><strong>Josue:</strong> Programación en Unity y diseño visual.</li>
+                    <li><strong>Judith:</strong> Programación en Unity y diseño visual.</li>
+                    <li><strong>Yuridia:</strong> Diseño web, pruebas y documentación.</li>
                 </ul>
             </div>
+
+            <!-- 12. Tecnologías Utilizadas -->
             <div class="sub-card">
                 <h3>🛠️ Tecnologías Utilizadas</h3>
                 <ul>
                     <li><strong>Motor:</strong> Unity 2D (Versión 2022.3 LTS)</li>
                     <li><strong>Lenguaje:</strong> C#</li>
-                    <li><strong>Herramientas de desarrollo:</strong> Canva y Visual Studio</li>
+                    <li><strong>Herramientas:</strong> Canva y Visual Studio</li>
                     <li><strong>Control de versiones:</strong> Git & GitHub</li>
                 </ul>
             </div>
-        </div>
-    </section>
 
-    <!-- 13 AL 15. CRÉDITOS, IA Y LICENCIAS -->
-    <section class="section-container-multi">
-        <h2>Créditos, IA y Licencias</h2>
-        <div class="grid-subsecciones">
+            <!-- 13. Créditos -->
             <div class="sub-card">
                 <h3>🎨 Créditos y Recursos</h3>
                 <p>Efectos de sonido y música bajo licencias Creative Commons de Freesound.org y OpenGameArt.org.</p>
             </div>
-            <div class="sub-card">
-                <h3>🤖 Uso de Inteligencia Artificial</h3>
-                <p>Herramientas de IA utilizadas como apoyo en optimización de código e inspiración conceptual inicial.</p>
-            </div>
+
+            <!-- 14. Licencias -->
             <div class="sub-card">
                 <h3>📜 Licencias</h3>
-                <p>Código fuente bajo licencia MIT. Los recursos gráficos son propiedad de los autores del proyecto.</p>
+                <p>Código fuente bajo licencia <strong>MIT</strong>. Recursos gráficos de propiedad exclusiva de los autores.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- 16 AL 19. TÉRMINOS, LEGALES Y CONTACTO -->
-    <section id="contacto" class="section-container-multi">
-        <h2>Términos, Legales y Contacto</h2>
-        <div class="grid-subsecciones">
+            <!-- 15. Aviso de Privacidad -->
+            <div class="sub-card">
+                <h3>🔒 Aviso de Privacidad</h3>
+                <p>Este sitio web y el juego no recopilan ni procesan ningún tipo de dato personal.</p>
+            </div>
+
+            <!-- 16. Advertencias -->
             <div class="sub-card">
                 <h3>⚠️ Advertencias</h3>
-                <p>Clasificación: <strong>PEGI 3 / ESRB Everyone</strong>. Apto para todo público.</p>
+                <p>Clasificación sugerida: <strong>PEGI 3 / ESRB Everyone</strong>. Libre de contenido sensible.</p>
             </div>
+
+            <!-- 17. Descargo de Responsabilidad -->
             <div class="sub-card">
                 <h3>⚖️ Descargo de Responsabilidad</h3>
-                <p>Proyecto desarrollado con fines estrictamente académicos.</p>
+                <p>Proyecto desarrollado con fines estrictamente académicos sin garantías de mantenimiento posterior.</p>
             </div>
+
+            <!-- 18. Contacto -->
             <div class="sub-card">
                 <h3>✉️ Contacto</h3>
                 <p><strong>Correo:</strong> <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a></p>
             </div>
+
+            <!-- 19. Uso de IA -->
             <div class="sub-card">
-                <h3>🔒 Aviso de Privacidad</h3>
-                <p>Este sitio web y el juego no recopilan ni procesan datos personales.</p>
+                <h3>🤖 Uso de Inteligencia Artificial</h3>
+                <p>Apoyo en optimización de código, estructuración de documentación e inspiración conceptual inicial.</p>
             </div>
         </div>
     </section>
