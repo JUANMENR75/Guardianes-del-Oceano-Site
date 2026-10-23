@@ -1,15 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Guardianes del Océano - Sitio Oficial</title>
+
     <!-- Fuente Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Configuración PWA -->
+    <meta name="description" content="Conoce Guardianes del Océano, un videojuego educativo para aprender a cuidar las playas y proteger la vida marina.">
+    <meta name="theme-color" content="#0b2545">
+
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" href="./Icono/Icono.png">
+    <link rel="apple-touch-icon" href="./Icono/Icono.png">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
     <!-- CONTENEDOR DE BURBUJAS DE FONDO -->
@@ -27,6 +41,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">🌊 Guardianes del Océano</a>
+
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#descripcion">Descripción</a></li>
@@ -40,22 +55,28 @@
         </div>
     </nav>
 
-    <!-- 1. PORTADA: Nombre, logotipo, eslogan e imagen principal -->
+    <!-- 1. PORTADA -->
     <header id="inicio" class="hero-banner">
         <img src="Fotos/1.png" alt="Guardianes del Océano Banner Principal" class="hero-img">
+
         <div class="hero-content">
-            <a href="#descarga" class="btn-descargar-hero">Descargar Prototipo (Alfa)</a>
+            <a href="#descarga" class="btn-descargar-hero">
+                Descargar Prototipo (Alfa)
+            </a>
         </div>
     </header>
 
-    <!-- 2. DESCRIPCIÓN: Historia, género, objetivo y público del juego -->
+    <!-- 2. DESCRIPCIÓN -->
     <section id="descripcion" class="info-container">
         <h2>Descripción del Juego</h2>
-        
+
         <div class="sub-card">
             <h3>📖 Historia General</h3>
+
             <p>Durante muchos años, el océano mantuvo en equilibrio la vida de Bahía Azul, una comunidad que dependía del mar para alimentarse y prosperar. Sin embargo, la acumulación de basura en las playas, la contaminación del agua y los residuos hundidos comenzaron a afectar a los animales marinos y a destruir su ecosistema.</p>
+
             <p>Kai, un joven habitante de la bahía, descubre una pequeña tortuga atrapada entre plásticos. Después de liberarla, comprende que limpiar solamente un lugar no será suficiente: la contaminación se extiende desde la playa hasta las profundidades del océano. Con la ayuda de los habitantes de la comunidad y utilizando un barco recolector, Kai inicia una misión para limpiar las diferentes zonas, rescatar animales y descubrir el origen de la contaminación.</p>
+
             <p>Cada residuo recuperado devuelve vida y color al ambiente. Su propósito será formar a los <strong>Guardianes del Océano</strong>, un grupo dedicado a proteger el mar y enseñar que incluso las acciones pequeñas pueden generar un gran cambio.</p>
         </div>
 
@@ -64,10 +85,12 @@
                 <h3>🎮 Género</h3>
                 <p>Aventura / Ecología / Arcade Educativo 2D.</p>
             </div>
+
             <div class="sub-card">
                 <h3>🎯 Objetivo</h3>
                 <p>Navegar con el barco recolector de Kai por distintos entornos, recolectar residuos y liberar animales atrapados para devolver la salud y el equilibrio a Bahía Azul.</p>
             </div>
+
             <div class="sub-card">
                 <h3>👥 Público Objetivo</h3>
                 <p>Apto para todo público (PEGI 3 / ESRB Everyone), orientado a estudiantes y jóvenes con interés en el aprendizaje interactivo sobre ecología.</p>
@@ -76,6 +99,7 @@
 
         <div class="ods-box" style="margin-top: 20px;">
             <h3>Compromiso Ambiental y ODS Asociados</h3>
+
             <ul>
                 <li><strong>ODS 14 (Vida Submarina):</strong> Protege y limpia las playas y ecosistemas marinos de Bahía Azul.</li>
                 <li><strong>ODS 12 (Producción y Consumo Responsables):</strong> Genera conciencia sobre la correcta recolección y manejo de residuos plásticos.</li>
@@ -85,17 +109,20 @@
         </div>
     </section>
 
-    <!-- 3. CARACTERÍSTICAS: Mecánicas y elementos principales -->
+    <!-- 3. CARACTERÍSTICAS -->
     <section id="caracteristicas" class="section-container-multi">
         <h2>Características Principales</h2>
+
         <div class="grid-subsecciones">
             <div class="sub-card">
                 <h3>Mecánicas de Navegación y Limpieza</h3>
                 <p>Controla el barco recolector en tiempo real, esquivando obstáculos marinos mientras recoges plásticos y desechos antes de que el contador de tiempo llegue a cero.</p>
             </div>
+
             <div class="sub-card">
                 <h3>Panel de Herramientas Ecológicas</h3>
                 <p>Equipa la embarcación con herramientas estratégicas de limpieza:</p>
+
                 <ul>
                     <li><strong>Red:</strong> Recoge basura flotante estándar.</li>
                     <li><strong>Imán:</strong> Atrae objetos metálicos pesados.</li>
@@ -103,6 +130,7 @@
                     <li><strong>Turbo:</strong> Incrementa la velocidad temporalmente.</li>
                 </ul>
             </div>
+
             <div class="sub-card">
                 <h3>Escenarios Dinámicos</h3>
                 <p>Acompaña a Kai desde las orillas de la playa hasta las zonas profundas del océano abierto, enfrentando retos únicos en cada entorno.</p>
@@ -110,33 +138,38 @@
         </div>
     </section>
 
-    <!-- 4. TRÁILER: Video promocional del videojuego -->
+    <!-- 4. TRÁILER -->
     <section id="trailer" class="info-container">
         <h2>Tráiler Promocional</h2>
+
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Tráiler de Guardianes del Océano" allowfullscreen></iframe>
         </div>
     </section>
 
-    <!-- 5. GALERÍA: Capturas y videos reales de la versión publicada -->
+    <!-- 5. GALERÍA -->
     <section id="galeria" class="section-container-multi">
         <h2>Galería del Juego</h2>
+
         <div class="grid-subsecciones">
             <div class="sub-card">
                 <h3>Menú Principal</h3>
                 <img src="Fotos/Menu Principal.png" alt="Menú Principal de Guardianes del Océano">
                 <p>Pantalla de inicio animada con entorno interactivo en bucle.</p>
             </div>
+
             <div class="sub-card">
                 <h3>Escenario: Playa</h3>
                 <img src="Fotos/Escenario Playa.png" alt="Escenario de Playa">
                 <p>Limpieza de plásticos y residuos arrastrados a la orilla por la corriente.</p>
             </div>
+
             <div class="sub-card">
                 <h3>Escenario: Océano</h3>
                 <img src="Fotos/Escenario Océano.png" alt="Escenario de Océano">
                 <p>Navegación avanzada en mar abierto para rescatar la fauna afectada.</p>
             </div>
+
             <div class="sub-card">
                 <h3>Panel de Herramientas</h3>
                 <img src="Fotos/Herramientas.png" alt="Pantalla de Herramientas del Juego">
@@ -145,21 +178,25 @@
         </div>
     </section>
 
-    <!-- 6. TUTORIAL: Instrucciones, reglas y controles -->
+    <!-- 6. TUTORIAL -->
     <section id="tutorial" class="section-container-multi">
         <h2>Tutorial e Instrucciones</h2>
+
         <div class="grid-subsecciones">
             <div class="sub-card">
                 <h3>🎮 Controles del Juego</h3>
+
                 <ul>
-                    <li><strong>Flechas del teclado:</strong> Desplazar el barco (Arriba, Abajo, Izquierda, Derecha).</li> 
+                    <li><strong>Flechas del teclado:</strong> Desplazar el barco (Arriba, Abajo, Izquierda, Derecha).</li>
                     <li><strong>Teclas W y S:</strong> Control vertical alternativo.</li>
                     <li><strong>Barra Espaciadora:</strong> Usar la herramienta activa.</li>
                     <li><strong>ESC:</strong> Menú de Pausa.</li>
                 </ul>
             </div>
+
             <div class="sub-card">
                 <h3>🎯 Reglas Principales</h3>
+
                 <ul>
                     <li>Recoge el máximo de basura posible antes de que expire el tiempo.</li>
                     <li>Evita colisiones con obstáculos marinos para no perder salud en el barco.</li>
@@ -169,9 +206,10 @@
         </div>
     </section>
 
-    <!-- 7. DESCARGA, 8. REQUISITOS Y 9. INSTALACIÓN AGRUPADOS -->
+    <!-- 7. DESCARGA, 8. REQUISITOS Y 9. INSTALACIÓN -->
     <section id="descarga" class="section-container-multi">
         <h2>Descarga e Instalación</h2>
+
         <div class="grid-subsecciones">
             <div class="sub-card">
                 <h3>💾 Descarga</h3>
@@ -179,8 +217,10 @@
                 <p><strong>Tamaño:</strong> ~111 MB</p>
                 <p><strong>Enlace:</strong> <a href="https://drive.google.com/file/d/1WTPguICm4AYy3INBlSBcI0271QrVvt5G/view?usp=sharing" target="_blank" rel="noopener noreferrer">Descargar archivo .ZIP</a></p>
             </div>
+
             <div class="sub-card">
                 <h3>💻 Requisitos Mínimos</h3>
+
                 <ul>
                     <li><strong>SO:</strong> Windows 10 / 11 (64-bit)</li>
                     <li><strong>Procesador:</strong> Intel Core i3 / AMD equivalente</li>
@@ -188,8 +228,10 @@
                     <li><strong>Gráficos:</strong> Intel HD 4000 o superior</li>
                 </ul>
             </div>
+
             <div class="sub-card">
                 <h3>⚙️ Guía de Instalación</h3>
+
                 <ol class="pasos-instalacion">
                     <li>Descarga el archivo <code>.ZIP</code>.</li>
                     <li>Descomprímelo en tu carpeta preferida.</li>
@@ -200,18 +242,21 @@
         </div>
     </section>
 
-    <!-- 10. DESARROLLO (SPRINTS) -->
+    <!-- 10. DESARROLLO -->
     <section class="section-container-multi">
         <h2>Bitácora de Desarrollo (Sprints)</h2>
+
         <div class="grid-subsecciones">
             <div class="sub-card">
                 <h3>Sprint 1: Base y Prototipeo</h3>
                 <p>Configuración del motor Unity 2D, programación de mecánicas iniciales de movimiento y diseño del menú principal.</p>
             </div>
+
             <div class="sub-card">
                 <h3>Sprint 2: Escenarios y Herramientas</h3>
                 <p>Implementación de las zonas Playa y Océano. Programación del inventario e interacción de herramientas ecológicas.</p>
             </div>
+
             <div class="sub-card">
                 <h3>Sprint 3: Pulido y UI</h3>
                 <p>Integración de efectos de sonido, diseño de interfaz de usuario, pruebas de juego y corrección de errores.</p>
@@ -219,12 +264,11 @@
         </div>
     </section>
 
-    <!-- 11 AL 19: UN SOLO CUADRO GRANDE CON SUB-TARJETAS AGRUPADAS -->
+    <!-- 11 AL 19: INFORMACIÓN TÉCNICA Y LEGAL -->
     <section id="detalles-tecnicos" class="section-container-multi">
         <h2>Información Técnica, Equipo y Aspectos Legales</h2>
-        
+
         <div class="grid-subsecciones">
-            <!-- 11. Equipo de Desarrollo -->
             <div class="sub-card">
                 <h3>👥 Equipo de Desarrollo</h3>
                 <ul>
@@ -235,7 +279,6 @@
                 </ul>
             </div>
 
-            <!-- 12. Tecnologías Utilizadas -->
             <div class="sub-card">
                 <h3>🛠️ Tecnologías Utilizadas</h3>
                 <ul>
@@ -246,43 +289,36 @@
                 </ul>
             </div>
 
-            <!-- 13. Créditos -->
             <div class="sub-card">
                 <h3>🎨 Créditos y Recursos</h3>
                 <p>Efectos de sonido y música bajo licencias Creative Commons de Freesound.org y OpenGameArt.org.</p>
             </div>
 
-            <!-- 14. Licencias -->
             <div class="sub-card">
                 <h3>📜 Licencias</h3>
                 <p>Código fuente bajo licencia <strong>MIT</strong>. Recursos gráficos de propiedad exclusiva de los autores.</p>
             </div>
 
-            <!-- 15. Aviso de Privacidad -->
             <div class="sub-card">
                 <h3>🔒 Aviso de Privacidad</h3>
                 <p>Este sitio web y el juego no recopilan ni procesan ningún tipo de dato personal.</p>
             </div>
 
-            <!-- 16. Advertencias -->
             <div class="sub-card">
                 <h3>⚠️ Advertencias</h3>
                 <p>Clasificación sugerida: <strong>PEGI 3 / ESRB Everyone</strong>. Libre de contenido sensible.</p>
             </div>
 
-            <!-- 17. Descargo de Responsabilidad -->
             <div class="sub-card">
                 <h3>⚖️ Descargo de Responsabilidad</h3>
                 <p>Proyecto desarrollado con fines estrictamente académicos sin garantías de mantenimiento posterior.</p>
             </div>
 
-            <!-- 18. Contacto -->
             <div class="sub-card">
                 <h3>✉️ Contacto</h3>
                 <p><strong>Correo:</strong> <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a></p>
             </div>
 
-            <!-- 19. Uso de IA -->
             <div class="sub-card">
                 <h3>🤖 Uso de Inteligencia Artificial</h3>
                 <p>Apoyo en optimización de código, estructuración de documentación e inspiración conceptual inicial.</p>
@@ -294,6 +330,21 @@
     <footer>
         <p>© 2026 Guardianes del Océano. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- REGISTRO DEL SERVICE WORKER -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./service-worker.js")
+                    .then(() => {
+                        console.log("PWA: Service Worker registrado correctamente.");
+                    })
+                    .catch((error) => {
+                        console.error("Error al registrar el Service Worker:", error);
+                    });
+            });
+        }
+    </script>
 
 </body>
 </html>

@@ -315,7 +315,7 @@ section:nth-of-type(4n+4) {
 }
 
 /* ==========================================
-   TÍTULOS PRINCIPALES: 32 PX
+   TÍTULOS PRINCIPALES
    ========================================== */
 h1 {
     font-family: Arial, sans-serif;
@@ -326,7 +326,7 @@ h1 {
 }
 
 /* ==========================================
-   TÍTULOS DE SECCIÓN: 28 PX
+   TÍTULOS DE SECCIÓN
    ========================================== */
 h2 {
     color: var(--title-navy);
@@ -341,7 +341,7 @@ h2 {
 }
 
 /* ==========================================
-   SUBTÍTULOS: 22 PX
+   SUBTÍTULOS
    ========================================== */
 h3 {
     color: var(--title-navy);
@@ -352,7 +352,7 @@ h3 {
     margin-bottom: 0.8rem;
 }
 
-/* TEXTO SECUNDARIO: 18 PX */
+/* TEXTO SECUNDARIO */
 .section-subtitle {
     color: var(--text-secondary);
     font-family: Arial, sans-serif;
@@ -545,5 +545,54 @@ a {
     p,
     li {
         font-size: 15px;
+    }
+}
+
+
+/* ==========================================
+   BOTÓN PERMANENTE DE INSTALACIÓN PWA
+   ========================================== */
+
+.btn-instalar {
+    display: inline-block;
+    background: linear-gradient(135deg, #00ff87, #00f0ff);
+    color: #0b2545;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 240, 255, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-instalar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 240, 255, 0.4);
+}
+
+.btn-instalar:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+#mensaje-instalacion {
+    text-align: center;
+    margin: 10px auto;
+    padding: 0 15px;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .btn-instalar {
+        font-size: 13px;
+        padding: 9px 12px;
     }
 }
