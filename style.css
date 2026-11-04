@@ -596,3 +596,102 @@ a {
         padding: 9px 12px;
     }
 }
+
+/* ==========================================
+   DISEÑO DE NOTIFICACIONES
+   ========================================== */
+
+#notificaciones {
+    background: linear-gradient(135deg, #073b63, #0b2545) !important;
+    border: 1px solid rgba(0, 240, 255, 0.5);
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+#notificaciones h2 {
+    color: #ffffff;
+    border-bottom: 2px solid #00f0ff;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+#notificaciones .sub-card {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    border-radius: 18px;
+}
+
+#notificaciones .sub-card p {
+    color: #d9f3ff;
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+#notificaciones button {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 25px;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#activar-notificaciones {
+    background: linear-gradient(135deg, #00ff87, #00f0ff);
+    color: #08243e;
+    box-shadow: 0 5px 15px rgba(0, 240, 255, 0.25);
+}
+
+#activar-notificaciones:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 240, 255, 0.4);
+}
+
+#desactivar-notificaciones {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#desactivar-notificaciones:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-3px);
+}
+
+#notificaciones button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+#estado-notificaciones {
+    margin-top: 20px;
+    color: #00f0ff;
+    font-size: 15px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+    #notificaciones {
+        padding: 25px 15px;
+    }
+
+    #notificaciones h2 {
+        font-size: 25px;
+    }
+
+    #notificaciones .sub-card {
+        padding: 22px 15px;
+    }
+
+    #notificaciones button {
+        width: 100%;
+        margin: 7px 0;
+    }
+}

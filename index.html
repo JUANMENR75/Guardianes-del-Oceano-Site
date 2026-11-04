@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,7 +26,7 @@
 
 <body>
 
-    <!-- CONTENEDOR DE BURBUJAS DE FONDO -->
+    <!-- CONTENEDOR DE BURBUJAS -->
     <div class="bubbles-container">
         <div class="bubble"></div>
         <div class="bubble"></div>
@@ -37,7 +37,7 @@
         <div class="bubble"></div>
     </div>
 
-    <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
+    <!-- BARRA DE NAVEGACIÓN -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">🌊 Guardianes del Océano</a>
@@ -50,6 +50,7 @@
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#tutorial">Tutorial</a></li>
                 <li><a href="#descarga">Descargar</a></li>
+                <li><a href="#notificaciones">Notificaciones</a></li>
                 <li><a href="#detalles-tecnicos">Detalles y Legales</a></li>
             </ul>
         </div>
@@ -142,9 +143,10 @@
     <section id="trailer" class="info-container">
         <h2>Tráiler Promocional</h2>
 
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Tráiler de Guardianes del Océano" allowfullscreen></iframe>
-        </div>
+        <video controls width="100%">
+            <source src="videos/Trailer.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
     </section>
 
     <!-- 5. GALERÍA -->
@@ -206,7 +208,7 @@
         </div>
     </section>
 
-    <!-- 7. DESCARGA, 8. REQUISITOS Y 9. INSTALACIÓN -->
+    <!-- 7. DESCARGA, REQUISITOS E INSTALACIÓN -->
     <section id="descarga" class="section-container-multi">
         <h2>Descarga e Instalación</h2>
 
@@ -242,7 +244,7 @@
         </div>
     </section>
 
-    <!-- 10. DESARROLLO -->
+    <!-- 8. DESARROLLO -->
     <section class="section-container-multi">
         <h2>Bitácora de Desarrollo (Sprints)</h2>
 
@@ -264,11 +266,12 @@
         </div>
     </section>
 
-    <!-- 11 AL 19: INFORMACIÓN TÉCNICA Y LEGAL -->
+    <!-- 9. INFORMACIÓN TÉCNICA Y LEGAL -->
     <section id="detalles-tecnicos" class="section-container-multi">
         <h2>Información Técnica, Equipo y Aspectos Legales</h2>
 
         <div class="grid-subsecciones">
+
             <div class="sub-card">
                 <h3>👥 Equipo de Desarrollo</h3>
                 <ul>
@@ -285,7 +288,7 @@
                     <li><strong>Motor:</strong> Unity 2D (Versión 2022.3 LTS)</li>
                     <li><strong>Lenguaje:</strong> C#</li>
                     <li><strong>Herramientas:</strong> Canva y Visual Studio</li>
-                    <li><strong>Control de versiones:</strong> Git & GitHub</li>
+                    <li><strong>Control de versiones:</strong> Git y GitHub</li>
                 </ul>
             </div>
 
@@ -299,9 +302,19 @@
                 <p>Código fuente bajo licencia <strong>MIT</strong>. Recursos gráficos de propiedad exclusiva de los autores.</p>
             </div>
 
-            <div class="sub-card">
+            <!-- AVISO DE PRIVACIDAD -->
+            <div class="sub-card" id="aviso-privacidad">
                 <h3>🔒 Aviso de Privacidad</h3>
-                <p>Este sitio web y el juego no recopilan ni procesan ningún tipo de dato personal.</p>
+
+                <p>En Guardianes del Océano respetamos la privacidad de nuestros visitantes. Este sitio web no solicita nombres, direcciones ni otros datos personales para utilizar sus funciones.</p>
+
+                <p>La aplicación utiliza las APIs <strong>Notification</strong>, <strong>Permissions</strong> y <strong>Service Worker</strong> del navegador para solicitar permisos, consultar su estado y mostrar notificaciones.</p>
+
+                <p>Las notificaciones son opcionales. El usuario puede aceptar o rechazar el permiso y modificarlo posteriormente desde la configuración de su navegador.</p>
+
+                <p>La aplicación utiliza el almacenamiento local del navegador para guardar los recursos necesarios para funcionar sin conexión. No se envían datos de suscripción a un servidor externo.</p>
+
+                <p><strong>Última actualización:</strong> noviembre de 2026.</p>
             </div>
 
             <div class="sub-card">
@@ -323,6 +336,28 @@
                 <h3>🤖 Uso de Inteligencia Artificial</h3>
                 <p>Apoyo en optimización de código, estructuración de documentación e inspiración conceptual inicial.</p>
             </div>
+
+        </div>
+    </section>
+
+    <!-- 10. NOTIFICACIONES -->
+    <section id="notificaciones" class="info-container">
+        <h2>🔔 Notificaciones</h2>
+
+        <div class="sub-card">
+            <p>Activa las notificaciones para recibir avisos y mensajes de Guardianes del Océano.</p>
+
+            <button id="activar-notificaciones" type="button">
+                Activar notificaciones
+            </button>
+
+            <button id="desactivar-notificaciones" type="button">
+                Desactivar notificaciones
+            </button>
+
+            <p id="estado-notificaciones" aria-live="polite">
+                Puedes activar las notificaciones.
+            </p>
         </div>
     </section>
 
@@ -331,20 +366,9 @@
         <p>© 2026 Guardianes del Océano. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- REGISTRO DEL SERVICE WORKER -->
-    <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-                navigator.serviceWorker.register("./service-worker.js")
-                    .then(() => {
-                        console.log("PWA: Service Worker registrado correctamente.");
-                    })
-                    .catch((error) => {
-                        console.error("Error al registrar el Service Worker:", error);
-                    });
-            });
-        }
-    </script>
+    <!-- CONEXIÓN CON APP.JS -->
+    <script src="./app.js" defer></script>
 
 </body>
 </html>
+```
