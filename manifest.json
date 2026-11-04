@@ -1,0 +1,22 @@
+
+{
+  "id": "./",
+  "name": "Guardianes del Océano",
+  "short_name": "Guardianes",
+  "description": "Videojuego educativo para aprender a cuidar las playas y proteger la vida marina.",
+  "lang": "es-MX",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b2545",
+  "theme_color": "#0b2545",
+  "icons": [
+    {
+      "src": "./Icono/Icono.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
