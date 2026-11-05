@@ -1,27 +1,12 @@
 /* ==========================================
    GUARDIANES DEL OCÉANO - APP.JS
-   PWA Y NOTIFICACIONES PUSH SUPABASE
+   PWA Y NOTIFICACIONES LOCALES (GITHUB PAGES)
    ========================================== */
 
-const PUBLIC_VAPID_KEY = 'BFFdg_Y6A-AxcKH7VWD5EupX9UJpxg59nqcgWSubGjG6Y71MZCQoaNsLO2Ryry3glFo1Tp6NTdbaCJOEhg3HiYQ';
-
-// Función auxiliar para convertir la clave VAPID pública
-function urlBase64ToUint8Array(base64String) {
-    const padding = '='.repeat((4 - base64String.length % 4) % 4);
-    const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
-    const rawData = window.atob(base64);
-    const outputArray = new Uint8Array(rawData.length);
-    for (let i = 0; i < rawData.length; ++i) {
-        outputArray[i] = rawData.charCodeAt(i);
-    }
-    return outputArray;
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-
     console.log("Guardianes del Océano está listo.");
 
-    // Registrar Service Worker
+    // Registrar Service Worker de tu PWA
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("./service-worker.js")
             .then(registro => {
@@ -29,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 configurarNotificaciones(registro);
             })
             .catch(error => {
-                console.error("Error al registrar:", error);
+                console.error("Error al registrar el Service Worker:", error);
             });
     }
 
@@ -55,11 +40,10 @@ window.addEventListener("offline", () => {
 });
 
 // ==========================================
-// NOTIFICACIONES
+// NOTIFICACIONES LOCALES CON SERVICE WORKER
 // ==========================================
 
 function configurarNotificaciones(registro) {
-
     const activar = document.getElementById("activar-notificaciones");
     const desactivar = document.getElementById("desactivar-notificaciones");
     const estado = document.getElementById("estado-notificaciones");
@@ -69,7 +53,7 @@ function configurarNotificaciones(registro) {
         console.log(mensaje);
     }
 
-    // Consultar permiso
+    // Consultar permiso del navegador
     if ("permissions" in navigator) {
         navigator.permissions.query({ name: "notifications" })
             .then(resultado => {
@@ -90,12 +74,11 @@ function configurarNotificaciones(registro) {
             });
     }
 
-    // ACTIVAR Y SUSCRIBIR EN SUPABASE
+    // ACTIVAR NOTIFICACIÓN EN EL CLIENTE
     if (activar) {
         activar.addEventListener("click", async () => {
-
-            if (!("Notification" in window) || !("PushManager" in window)) {
-                mostrarEstado("Tu navegador no admite notificaciones Push.");
+            if (!("Notification" in window)) {
+                mostrarEstado("Tu navegador no admite notificaciones.");
                 return;
             }
 
@@ -107,34 +90,17 @@ function configurarNotificaciones(registro) {
                     return;
                 }
 
-                mostrarEstado("Registrando suscripción...");
+                mostrarEstado("Activando notificaciones...");
 
-                // 1. Obtener la suscripción Push desde el Service Worker
-                let suscripcion = await registro.pushManager.getSubscription();
-                if (!suscripcion) {
-                    suscripcion = await registro.pushManager.subscribe({
-                        userVisibleOnly: true,
-                        applicationServerKey: urlBase64ToUint8Array(PUBLIC_VAPID_KEY)
-                    });
-                }
-
-                // 2. Guardar la suscripción en Supabase vía Vercel API
-                const respuesta = await fetch('/api/subscribe', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(suscripcion)
-                });
-
-                if (!respuesta.ok) throw new Error("Error al guardar en el servidor");
-
-                // 3. Mostrar notificación de confirmación
+                // Lanza la notificación usando tu Service Worker local
                 await registro.showNotification("Guardianes del Océano", {
                     body: "¡Gracias por activar las notificaciones y cuidar nuestros océanos!",
                     icon: "./Icono/Icono.png",
-                    badge: "./Icono/Icono.png"
+                    badge: "./Icono/Icono.png",
+                    vibrate: [200, 100, 200]
                 });
 
-                mostrarEstado("¡Notificaciones activadas y suscripción guardada!");
+                mostrarEstado("¡Notificaciones activadas con éxito!");
 
             } catch (error) {
                 console.error("Error al activar notificaciones:", error);
@@ -145,8 +111,7 @@ function configurarNotificaciones(registro) {
 
     // DESACTIVAR
     if (desactivar) {
-        desactivar.addEventListener("click", async () => {
-
+        desactivar.addEventListener("click", () => {
             if (!("Notification" in window)) return;
 
             mostrarEstado(
