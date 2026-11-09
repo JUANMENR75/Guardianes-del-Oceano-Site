@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "guardianes-oceano-v7";
+const CACHE_NAME = "guardianes-oceano-v12";
 
 const ARCHIVOS_CACHE = [
     "./",
