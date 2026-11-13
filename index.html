@@ -3,15 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardianes del Océano</title>
 
-    <title>Guardianes del Océano - Prueba Cambio Titulo</title>
-
-    <!-- Fuente Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Configuración PWA -->
     <meta name="description" content="Conoce Guardianes del Océano, un videojuego educativo para aprender a cuidar las playas y proteger la vida marina.">
     <meta name="theme-color" content="#0b2545">
 
@@ -19,14 +12,17 @@
     <link rel="icon" type="image/png" href="./Icono/Icono.png">
     <link rel="apple-touch-icon" href="./Icono/Icono.png">
 
-    <!-- Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <!-- CONTENEDOR DE BURBUJAS -->
-    <div class="bubbles-container">
+    <!-- BURBUJAS DE FONDO -->
+    <div class="bubbles-container" aria-hidden="true">
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
@@ -39,35 +35,49 @@
     <!-- BARRA DE NAVEGACIÓN -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">🌊 Guardianes del Océano - Prueba Cambio Titulo</a>
 
-            <ul class="nav-menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#descripcion">Descripción</a></li>
-                <li><a href="#caracteristicas">Características</a></li>
-                <li><a href="#trailer">Tráiler</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#tutorial">Tutorial</a></li>
-                <li><a href="#descarga">Descargar</a></li>
-                <li><a href="#notificaciones">Notificaciones</a></li>
-                <li><a href="#detalles-tecnicos">Detalles y Legales</a></li>
-            </ul>
+            <a href="#inicio" class="nav-logo" style="display: inline-flex; align-items: center; gap: 10px;">
+                <img src="./Icono/Icono.png" alt="Icono Guardianes del Océano" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                <span>Guardianes del Océano.</span>
+            </a>
+
+            <details class="menu-desplegable">
+                <summary class="btn-menu">☰ Menú</summary>
+
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#descripcion">Descripción</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#trailer">Tráiler</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#tutorial">Tutorial</a></li>
+                    <li><a href="#descarga">Descargar</a></li>
+                    <li><a href="#notificaciones">Notificaciones</a></li>
+                    <li><a href="#detalles-tecnicos">Detalles y Legales</a></li>
+                </ul>
+            </details>
+
         </div>
     </nav>
 
     <!-- 1. PORTADA -->
     <header id="inicio" class="hero-banner">
-        <img src="Fotos/1.png" alt="Guardianes del Océano Banner Principal" class="hero-img">
+
+        <img src="Fotos/1.png"
+             alt="Guardianes del Océano Banner Principal"
+             class="hero-img">
 
         <div class="hero-content">
             <a href="#descarga" class="btn-descargar-hero">
                 Descargar Prototipo (Alfa)
             </a>
         </div>
+
     </header>
 
     <!-- 2. DESCRIPCIÓN -->
     <section id="descripcion" class="info-container">
+
         <h2>Descripción del Juego</h2>
 
         <div class="sub-card">
@@ -80,7 +90,8 @@
             <p>Cada residuo recuperado devuelve vida y color al ambiente. Su propósito será formar a los <strong>Guardianes del Océano</strong>, un grupo dedicado a proteger el mar y enseñar que incluso las acciones pequeñas pueden generar un gran cambio.</p>
         </div>
 
-        <div class="grid-subsecciones" style="margin-top: 15px;">
+        <div class="grid-subsecciones">
+
             <div class="sub-card">
                 <h3>🎮 Género</h3>
                 <p>Aventura / Ecología / Arcade Educativo 2D.</p>
@@ -91,13 +102,20 @@
                 <p>Navegar con el barco recolector de Kai por distintos entornos, recolectar residuos y liberar animales atrapados para devolver la salud y el equilibrio a Bahía Azul.</p>
             </div>
 
+            <!-- TARJETA MODIFICADA CON LA ETIQUETA -->
             <div class="sub-card">
                 <h3>👥 Público Objetivo</h3>
-                <p>Apto para todo público (PEGI 3 / ESRB Everyone), orientado a estudiantes y jóvenes con interés en el aprendizaje interactivo sobre ecología.</p>
+                <div style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
+                    <img src="Fotos/etiqueta-ninos.png" 
+                         alt="Clasificación Solo Niños (N) ESRB" 
+                         style="width: 75px; height: auto; border-radius: 4px; background: white; padding: 3px; flex-shrink: 0;">
+                    <p style="margin: 0;">Exclusivo para niños (Clasificación N - Solo Niños).</p>
+                </div>
             </div>
+
         </div>
 
-        <div class="ods-box" style="margin-top: 20px;">
+        <div class="ods-box">
             <h3>Compromiso Ambiental y ODS Asociados</h3>
 
             <ul>
@@ -107,13 +125,16 @@
                 <li><strong>ODS 13 (Acción por el Clima):</strong> Destaca cómo la preservación de los océanos combate el deterioro ambiental global.</li>
             </ul>
         </div>
+
     </section>
 
     <!-- 3. CARACTERÍSTICAS -->
     <section id="caracteristicas" class="section-container-multi">
+
         <h2>Características Principales</h2>
 
         <div class="grid-subsecciones">
+
             <div class="sub-card">
                 <h3>Mecánicas de Navegación y Limpieza</h3>
                 <p>Controla el barco recolector en tiempo real, esquivando obstáculos marinos mientras recoges plásticos y desechos antes de que el contador de tiempo llegue a cero.</p>
@@ -135,24 +156,30 @@
                 <h3>Escenarios Dinámicos</h3>
                 <p>Acompaña a Kai desde las orillas de la playa hasta las zonas profundas del océano abierto, enfrentando retos únicos en cada entorno.</p>
             </div>
+
         </div>
+
     </section>
 
     <!-- 4. TRÁILER -->
     <section id="trailer" class="info-container">
+
         <h2>Tráiler Promocional</h2>
 
-        <video controls width="100%">
+        <video controls preload="metadata">
             <source src="videos/Trailer.mp4" type="video/mp4">
             Tu navegador no soporta la reproducción de video.
         </video>
+
     </section>
 
     <!-- 5. GALERÍA -->
     <section id="galeria" class="section-container-multi">
+
         <h2>Galería del Juego</h2>
 
         <div class="grid-subsecciones">
+
             <div class="sub-card">
                 <h3>Menú Principal</h3>
                 <img src="Fotos/Menu Principal.png" alt="Menú Principal de Guardianes del Océano">
@@ -176,14 +203,18 @@
                 <img src="Fotos/Herramientas.png" alt="Pantalla de Herramientas del Juego">
                 <p>Inventario de herramientas ecológicas activables durante la partida.</p>
             </div>
+
         </div>
+
     </section>
 
     <!-- 6. TUTORIAL -->
     <section id="tutorial" class="section-container-multi">
+
         <h2>Tutorial e Instrucciones</h2>
 
         <div class="grid-subsecciones">
+
             <div class="sub-card">
                 <h3>🎮 Controles del Juego</h3>
 
@@ -204,15 +235,19 @@
                     <li>Selecciona la herramienta adecuada según el residuo o situación.</li>
                 </ul>
             </div>
+
         </div>
+
     </section>
 
-    <!-- 7. DESCARGA, REQUISITOS E INSTALACIÓN -->
+    <!-- 7. DESCARGA E INSTALACIÓN -->
     <section id="descarga" class="section-container-multi">
+
         <h2>Descarga e Instalación</h2>
 
         <div class="grid-subsecciones">
-            <div class="sub-card">
+
+            <div class="sub-card download-card">
                 <h3>💾 Descarga</h3>
                 <p><strong>Versión:</strong> 1.0 (Alfa) | <strong>Plataforma:</strong> PC (Windows)</p>
                 <p><strong>Tamaño:</strong> ~111 MB</p>
@@ -240,14 +275,18 @@
                     <li>Si salta SmartScreen, selecciona <em>"Más información"</em> y <em>"Ejecutar de todas formas"</em>.</li>
                 </ol>
             </div>
+
         </div>
+
     </section>
 
     <!-- 8. DESARROLLO -->
     <section class="section-container-multi">
+
         <h2>Bitácora de Desarrollo (Sprints)</h2>
 
         <div class="grid-subsecciones">
+
             <div class="sub-card">
                 <h3>Sprint 1: Base y Prototipeo</h3>
                 <p>Configuración del motor Unity 2D, programación de mecánicas iniciales de movimiento y diseño del menú principal.</p>
@@ -262,11 +301,14 @@
                 <h3>Sprint 3: Pulido y UI</h3>
                 <p>Integración de efectos de sonido, diseño de interfaz de usuario, pruebas de juego y corrección de errores.</p>
             </div>
+
         </div>
+
     </section>
 
     <!-- 9. INFORMACIÓN TÉCNICA Y LEGAL -->
     <section id="detalles-tecnicos" class="section-container-multi">
+
         <h2>Información Técnica, Equipo y Aspectos Legales</h2>
 
         <div class="grid-subsecciones">
@@ -301,96 +343,61 @@
                 <p>Código fuente bajo licencia <strong>MIT</strong>. Recursos gráficos de propiedad exclusiva de los autores.</p>
             </div>
 
-            <!-- AVISO DE PRIVACIDAD INTEGRAL COMPLETO -->
-            <div class="sub-card" id="aviso-privacidad" style="grid-column: 1 / -1;">
-                <h3>🔒 AVISO DE PRIVACIDAD INTEGRAL</h3>
+            <div class="sub-card aviso-privacidad" id="aviso-privacidad">
+                <h3>🔒 AVISO DE PRIVACIDAD SIMPLIFICADO</h3>
 
-                <p>Yuridia González, con domicilio en Universidad Tecnologia Tula-Tepegi Campus Chapulhuacan, es el responsable del tratamiento de sus datos personales y los protege conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, publicada en el Diario Oficial de la Federación el 20 de marzo de 2025.</p>
+                <p>Yuridia González, con domicilio en Universidad Tecnologia Tula-Tepegi Campus Chapulhuacan, es el responsable del tratamiento de sus datos personales.</p>
 
-                <h4>1. Datos personales que se someten a tratamiento (artículo 15, fracción II)</h4>
-                <p>Para las finalidades señaladas en este aviso, tratamos los siguientes datos personales:</p>
-                <ul>
-                    <li>Nombre completo</li>
-                    <li>Correo electrónico</li>
-                </ul>
+                <p><strong>Datos que tratamos:</strong> nombre completo y correo electrónico.</p>
 
-                <h4>2. Finalidades del tratamiento (artículo 15, fracción III)</h4>
-                <p><strong>Finalidades necesarias, que dan origen y son indispensables para la relación jurídica con usted:</strong></p>
-                <ul>
-                    <li>Responder tu mensaje o solicitud de información</li>
-                    <li>Prestar el servicio que contrataste</li>
-                </ul>
+                <p><strong>Finalidades necesarias:</strong> responder tu mensaje o solicitud de información y prestar el servicio que contrataste.</p>
 
-                <p><strong>Finalidades que NO son necesarias para la relación jurídica. Nos permiten darle un mejor servicio, pero usted puede negarse a ellas sin que eso afecte la atención que le damos:</strong></p>
-                <ul>
-                    <li>Elaborar estadísticas internas para mejorar el servicio</li>
-                </ul>
+                <p><strong>Finalidades que no son necesarias:</strong> elaborar estadísticas internas para mejorar el servicio. Puede negarse a ellas escribiendo a <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a>, sin que eso afecte el servicio que solicita.</p>
 
-                <p>Si no desea que sus datos se traten para estas finalidades, puede manifestarlo enviando un correo a <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a>. Su negativa no será motivo para negarle los servicios que solicita.</p>
-                <p>Si en el futuro necesitáramos tratar sus datos para una finalidad distinta a las previstas en este aviso, solicitaremos nuevamente su consentimiento, conforme al artículo 11 de la Ley.</p>
+                <p>Puede limitar el uso o divulgación de sus datos escribiendo a <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a>.</p>
 
-                <h4>3. Opciones y medios para limitar el uso o divulgación de sus datos (artículo 15, fracción IV)</h4>
-                <p>Puede solicitarnos en cualquier momento que dejemos de usar sus datos para las finalidades que no son necesarias —por ejemplo, dejar de recibir promociones o recordatorios— enviando su solicitud a <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a>. Le confirmaremos la baja por el mismo medio.</p>
+                <p><strong>Consulte el aviso de privacidad integral</strong>, con el procedimiento para ejercer sus derechos ARCO, en:</p>
 
-                <h4>4. Medios y procedimiento para ejercer los derechos ARCO (artículo 15, fracción V)</h4>
-                <p>Usted tiene derecho a conocer qué datos personales tenemos, para qué los usamos y las condiciones de su tratamiento (Acceso); a pedir la corrección de su información cuando esté desactualizada, sea inexacta o incompleta (Rectificación); a solicitar que la eliminemos de nuestros registros cuando considere que no está siendo utilizada conforme a los principios y deberes que marca la Ley (Cancelación); así como a oponerse al uso de sus datos para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.</p>
-                <p>Para ejercerlos, envíe su solicitud a <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a>. De acuerdo con el artículo 28 de la Ley, la solicitud debe contener y acompañar:</p>
-                <ul>
-                    <li>Su nombre y domicilio, o cualquier otro medio para recibir la respuesta.</li>
-                    <li>Los documentos que acrediten su identidad o, en su caso, la identidad y personalidad de su representante.</li>
-                    <li>La descripción clara y precisa de los datos personales sobre los que busca ejercer el derecho, salvo que se trate del derecho de acceso.</li>
-                    <li>La descripción del derecho ARCO que desea ejercer o lo que solicita.</li>
-                    <li>Cualquier otro elemento que facilite la localización de sus datos personales.</li>
-                </ul>
-                <p>Le comunicaremos la determinación adoptada en un plazo máximo de veinte días hábiles contados desde que recibimos su solicitud y, de resultar procedente, la haremos efectiva dentro de los quince días siguientes (artículo 31). Estos plazos pueden ampliarse una sola vez por un periodo igual cuando las circunstancias del caso lo justifiquen. El ejercicio de los derechos ARCO es gratuito; solo podrán cobrarse los costos de reproducción, copias o envío (artículo 34).</p>
-
-                <h4>5. Revocación del consentimiento (artículo 7)</h4>
-                <p>Puede revocar en cualquier momento el consentimiento que nos otorgó para el tratamiento de sus datos personales, escribiendo a <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a>. La revocación no tendrá efectos retroactivos. Tenga en cuenta que, en algunos casos, no podremos atender su solicitud de inmediato porque una obligación legal nos exija seguir tratando sus datos, o porque sean necesarios para concluir la relación jurídica que tenemos con usted.</p>
-
-                <h4>6. Uso de cookies y tecnologías de rastreo</h4>
-                <p>Nuestro sitio web utiliza cookies y tecnologías similares que permiten recordar sus preferencias y entender cómo se usa el sitio. Estas herramientas pueden recabar datos como su dirección IP, el tipo de navegador y las páginas que visita. Puede deshabilitarlas o eliminarlas en cualquier momento desde la configuración de su navegador; hacerlo puede afectar algunas funciones del sitio.</p>
-
-                <h4>7. Cambios al aviso de privacidad (artículo 15, fracción VI)</h4>
-                <p>Este aviso puede modificarse por cambios en nuestros servicios, en nuestras prácticas de privacidad o en la legislación aplicable. Cualquier modificación se publicará en <a href="https://juanmenr75.github.io/Guardianes-del-Oceano-Site/" target="_blank" rel="noopener noreferrer">https://juanmenr75.github.io/Guardianes-del-Oceano-Site/</a>, indicando la fecha de la última actualización. Le pedimos revisar esa dirección periódicamente; si el cambio afecta las finalidades del tratamiento, le solicitaremos nuevamente su consentimiento.</p>
-
-                <h4>8. Autoridad competente</h4>
-                <p>Si considera que su derecho a la protección de datos personales ha sido lesionado por alguna conducta de nuestra parte, o presume alguna violación a la Ley, puede presentar su inconformidad ante la Secretaría Anticorrupción y Buen Gobierno, que es la autoridad competente en la materia conforme al artículo 2, fracción XV de la Ley.</p>
-
-                <p style="margin-top: 15px;"><strong>Responsable:</strong> Yuridia González<br>
-                <strong>Domicilio:</strong> Universidad Tecnologia Tula-Tepegi Campus Chapulhuacan<br>
-                <strong>Correo para asuntos de datos personales:</strong> <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a><br>
-                <strong>Actividad:</strong> Desarrollo y distribución de software / videojuegos<br>
-                <strong>Última actualización:</strong> 9 de noviembre de 2026</p>
+                <p>
+                    <a href="https://juanmenr75.github.io/Guardianes-del-Oceano-Site/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Consultar aviso de privacidad integral
+                    </a>
+                </p>
             </div>
 
             <div class="sub-card">
                 <h3>⚠️ Advertencias</h3>
-                <p>Clasificación sugerida: <strong>PEGI 3 / ESRB Everyone</strong>. Libre de contenido sensible.</p>
+                <p>Clasificación sugerida: <strong>N - Solo Niños (ESRB)</strong>. Libre de contenido sensible.</p>
             </div>
 
             <div class="sub-card">
                 <h3>⚖️ Descargo de Responsabilidad</h3>
-                <p>Proyecto desarrollado con fines strictly académicos sin garantías de mantenimiento posterior.</p>
+                <p>Proyecto desarrollado con fines estrictamente académicos, sin garantías de mantenimiento posterior.</p>
             </div>
 
             <div class="sub-card">
                 <h3>✉️ Contacto</h3>
-                <p><strong>Correo:</strong> <a href="mailto:23301912@uttt.edu.mx">23301912@uttt.edu.mx</a></p>
+                <p><strong>Correo:</strong> <a href="jm7566880@gmail.com">jm7566880@gmail.com</a></p>
             </div>
 
             <div class="sub-card">
                 <h3>🤖 Uso de Inteligencia Artificial</h3>
-                <p>Apoyo en optimización de código, estructuración de documentación e inspiración conceptual inicial.</p>
+                <p>Se utilizó la herramienta AI para la revisión y corrección de errores de código (HTML/C#) y diseño de elementos gráficos auxiliares.</p>
             </div>
 
         </div>
+
     </section>
 
     <!-- 10. NOTIFICACIONES -->
     <section id="notificaciones" class="info-container">
+
         <h2>🔔 Notificaciones</h2>
 
-        <div class="sub-card">
+        <div class="sub-card notificaciones-card">
+
             <p>Activa las notificaciones para recibir avisos y mensajes de Guardianes del Océano.</p>
 
             <button id="activar-notificaciones" type="button">
@@ -404,12 +411,18 @@
             <p id="estado-notificaciones" aria-live="polite">
                 Puedes activar las notificaciones.
             </p>
+
         </div>
+
     </section>
 
     <!-- PIE DE PÁGINA -->
     <footer>
-        <p>© 2026 Guardianes del Océano. Todos los derechos reservados.</p>
+        <p style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+            © 2026 
+            <img src="./Icono/Icono.png" alt="Icono Guardianes del Océano" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+            <span>Guardianes del Océano. Todos los derechos reservados.</span>
+        </p>
     </footer>
 
     <!-- CONEXIÓN CON APP.JS -->
