@@ -1,4 +1,3 @@
-
 /* =========================================
    GUARDIANES DEL OCÉANO - DISEÑO GENERAL
 ========================================= */
@@ -13,7 +12,9 @@
     --panel: rgba(255, 255, 255, 0.07);
 }
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,7 +22,8 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 95px;
+    scroll-padding-top: 90px;
+    overflow-x: hidden;
 }
 
 body {
@@ -30,8 +32,10 @@ body {
     color: var(--text-primary);
     font-size: 16px;
     line-height: 1.7;
-    padding-top: 76px;
+    padding-top: 74px;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 p, li, button, input, textarea, select {
@@ -39,26 +43,30 @@ p, li, button, input, textarea, select {
     font-size: 16px;
 }
 
-p, li {
+p, li, a {
     line-height: 1.7;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 h1, h2, h3 {
     line-height: 1.35;
+    overflow-wrap: anywhere;
 }
 
 h2 {
     color: #ffffff;
-    font-size: 27px;
-    margin-bottom: 23px;
+    font-size: clamp(22px, 3vw, 28px);
+    margin-bottom: 22px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--accent-cyan);
     display: inline-block;
+    max-width: 100%;
 }
 
 h3 {
     color: var(--accent-cyan);
-    font-size: 19px;
+    font-size: clamp(17px, 2.2vw, 20px);
     margin-bottom: 12px;
 }
 
@@ -184,21 +192,30 @@ a:hover {
 }
 
 .nav-container {
+    width: 100%;
     max-width: 1250px;
     min-height: 70px;
     margin: auto;
-    padding: 10px 24px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
+    gap: 12px;
 }
 
 .nav-logo {
     color: var(--accent-cyan);
-    font-size: 19px;
+    font-size: clamp(15px, 2vw, 19px);
     font-weight: bold;
     text-decoration: none;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-logo span {
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 
@@ -206,6 +223,7 @@ a:hover {
 
 .menu-desplegable {
     position: relative;
+    flex-shrink: 0;
 }
 
 .btn-menu {
@@ -217,9 +235,9 @@ a:hover {
         var(--accent-green),
         var(--accent-cyan)
     );
-    padding: 10px 22px;
+    padding: 10px 20px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     transition: transform .2s ease, box-shadow .2s ease;
     white-space: nowrap;
@@ -242,9 +260,11 @@ a:hover {
 
 .nav-menu {
     position: absolute;
-    top: calc(100% + 13px);
+    top: calc(100% + 12px);
     right: 0;
     width: min(92vw, 920px);
+    max-height: calc(100vh - 95px);
+    overflow-y: auto;
     padding: 18px 20px;
     margin: 0;
     list-style: none;
@@ -264,7 +284,7 @@ a:hover {
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 15px;
-    padding: 7px 3px;
+    padding: 7px 6px;
 }
 
 .nav-menu a:hover {
@@ -289,8 +309,7 @@ a:hover {
 .hero-img {
     display: block;
     width: 100%;
-    height: 430px;
-    max-height: none;
+    height: clamp(220px, 34vw, 430px);
     object-fit: cover;
     object-position: center;
 }
@@ -298,15 +317,16 @@ a:hover {
 .hero-content {
     position: absolute;
     left: 50%;
-    bottom: 25px;
+    bottom: 24px;
     transform: translateX(-50%);
     text-align: center;
     width: 100%;
+    padding: 0 16px;
 }
 
 .btn-descargar-hero {
     display: inline-block;
-    padding: 12px 27px;
+    padding: 12px 26px;
     border-radius: 30px;
     color: #041221;
     background: linear-gradient(
@@ -314,7 +334,7 @@ a:hover {
         var(--accent-green),
         var(--accent-cyan)
     );
-    font-size: 16px;
+    font-size: clamp(14px, 1.5vw, 16px);
     font-weight: bold;
     text-decoration: none;
     box-shadow: 0 5px 18px rgba(0,255,135,.25);
@@ -336,10 +356,9 @@ a:hover {
 .section-game {
     position: relative;
     z-index: 1;
-    width: 92%;
-    max-width: 1200px;
-    margin: 32px auto;
-    padding: 32px;
+    width: min(94%, 1200px);
+    margin: 28px auto;
+    padding: clamp(18px, 3vw, 32px);
     border-radius: 18px;
     background: linear-gradient(
         145deg,
@@ -358,7 +377,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(
         auto-fit,
-        minmax(260px, 1fr)
+        minmax(min(100%, 260px), 1fr)
     );
     gap: 18px;
     margin-top: 18px;
@@ -366,7 +385,7 @@ a:hover {
 
 .sub-card {
     min-width: 0;
-    padding: 22px;
+    padding: clamp(16px, 2.2vw, 22px);
     border-radius: 15px;
     background: var(--panel);
     border: 1px solid rgba(255,255,255,.14);
@@ -389,10 +408,10 @@ a:hover {
 
 .sub-card img {
     display: block;
-    width: 100%;
-    height: 210px;
+    max-width: 100%;
+    height: clamp(150px, 22vw, 210px);
     object-fit: contain;
-    margin: 14px 0;
+    margin: 14px auto;
     border-radius: 10px;
 }
 
@@ -402,7 +421,7 @@ a:hover {
 
 .ods-box {
     margin-top: 20px;
-    padding: 22px;
+    padding: clamp(16px, 2.2vw, 22px);
     border-left: 4px solid var(--accent-cyan);
     border-radius: 12px;
     background: rgba(0,240,255,.08);
@@ -414,7 +433,7 @@ a:hover {
 
 ul,
 ol {
-    padding-left: 23px;
+    padding-left: 20px;
 }
 
 li {
@@ -425,6 +444,7 @@ code {
     background: rgba(0,0,0,.22);
     padding: 2px 6px;
     border-radius: 5px;
+    overflow-wrap: anywhere;
 }
 
 /* =========================================
@@ -434,6 +454,8 @@ code {
 video {
     display: block;
     width: 100%;
+    max-width: 100%;
+    height: auto;
     max-height: 560px;
     border-radius: 14px;
     background: #06182c;
@@ -466,16 +488,18 @@ video {
 }
 
 .notificaciones-card {
+    width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    padding: 28px;
+    padding: clamp(18px, 3vw, 28px);
 }
 
 #notificaciones button {
     border: 0;
     border-radius: 28px;
-    padding: 12px 23px;
+    padding: 12px 22px;
     margin: 7px;
+    max-width: 100%;
     font-weight: bold;
     cursor: pointer;
     transition:
@@ -526,7 +550,7 @@ video {
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    white-space: nowrap;
+    max-width: 100%;
     box-shadow: 0 4px 12px rgba(0,240,255,.25);
     transition:
         transform .2s ease,
@@ -560,8 +584,9 @@ summary:focus-visible {
 footer {
     position: relative;
     z-index: 1;
-    margin-top: 45px;
-    padding: 25px;
+    width: 100%;
+    margin-top: 40px;
+    padding: 22px 16px;
     text-align: center;
     color: var(--text-secondary);
     background: rgba(4,20,38,.72);
@@ -569,32 +594,47 @@ footer {
 }
 
 /* =========================================
-   DISEÑO PARA CELULARES
+   DISEÑO PARA CELULARES Y PANTALLAS CHICAS
 ========================================= */
 
 @media (max-width: 768px) {
 
+    html {
+        scroll-padding-top: 76px;
+    }
+
     body {
-        padding-top: 68px;
+        padding-top: 64px;
+        font-size: 15px;
+    }
+
+    p, li, button, input, textarea, select {
+        font-size: 15px;
     }
 
     .nav-container {
-        min-height: 64px;
-        padding: 9px 14px;
+        min-height: 62px;
+        padding: 8px 12px;
         gap: 8px;
     }
 
     .nav-logo {
-        font-size: 15px;
+        gap: 7px !important;
+        font-size: 13px;
+    }
+
+    .nav-logo img {
+        width: 26px !important;
+        height: 26px !important;
     }
 
     .btn-menu {
-        padding: 9px 14px;
-        font-size: 14px;
+        padding: 8px 12px;
+        font-size: 13px;
     }
 
     .nav-menu {
-        width: min(92vw, 390px);
+        width: min(94vw, 390px);
         display: grid;
         grid-template-columns: 1fr;
         gap: 2px;
@@ -604,6 +644,7 @@ footer {
     .nav-menu a {
         padding: 9px 12px;
         border-radius: 7px;
+        font-size: 14px;
     }
 
     .nav-menu a:hover {
@@ -614,40 +655,47 @@ footer {
     .section-container-multi,
     .section-game {
         width: 94%;
-        margin: 22px auto;
-        padding: 22px 17px;
+        margin: 18px auto;
+        padding: 18px 14px;
+        border-radius: 15px;
     }
 
     .grid-subsecciones {
         grid-template-columns: 1fr;
+        gap: 14px;
     }
 
-    h2 {
-        font-size: 23px;
+    .sub-card img {
+        height: auto;
+        max-height: 190px;
     }
 
-    h3 {
-        font-size: 18px;
-    }
-
-    /* PORTADA COMPLETA EN CELULARES */
+    /* PORTADA COMPLETA SIN RECORTES EN CELULARES */
 
     .hero-banner {
         width: 100%;
+        margin-bottom: 20px;
         border-radius: 0;
+        background: linear-gradient(180deg, #0099e6 0%, #0b2545 100%);
+        padding-bottom: 14px;
     }
 
     .hero-img {
-        height: 260px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     .hero-content {
-        bottom: 12px;
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        padding: 0 12px;
     }
 
     .btn-descargar-hero {
-        padding: 9px 15px;
-        font-size: 14px;
+        padding: 9px 18px;
+        font-size: 13.5px;
     }
 
     #notificaciones button {
@@ -656,7 +704,32 @@ footer {
     }
 
     .notificaciones-card {
-        padding: 20px 15px;
+        padding: 18px 12px;
+    }
+}
+
+/* AJUSTE EXTRA PARA PANTALLAS MUY ANGOSTAS (<= 360px) */
+
+@media (max-width: 360px) {
+
+    .nav-container {
+        padding: 8px 10px;
+        gap: 6px;
+    }
+
+    .nav-logo {
+        gap: 6px !important;
+        font-size: 12px;
+    }
+
+    .nav-logo img {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .btn-menu {
+        padding: 7px 10px;
+        font-size: 12px;
     }
 }
 
